@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TestApp.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users</h2>
+<div>
+
+</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DisplayName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Samaccountname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Samaccountname)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Details", "Details", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Reset Password", "ResetPassword", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+

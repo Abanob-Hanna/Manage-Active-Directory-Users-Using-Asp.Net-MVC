@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TestApp.Models.User>
+
+<div class="container">
+    <table class="table text-center table-bordered table-hover">
+        <tr class="text-info">
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.DisplayName)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Samaccountname)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.UserLogonName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+           <tr>
+             <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Samaccountname)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.UserLogonName)
+             </td>
+             <td>
+                @Html.ActionLink("Edit", "Edit","User", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Details", "Details","User", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Reset Password", "ResetPassword","User", new { _samaccountname = item.Samaccountname }, new { @class = "btn btn-danger" })
+             </td>
+           </tr>
+        }
+
+    </table>
+</div>

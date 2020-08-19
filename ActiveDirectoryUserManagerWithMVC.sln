@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveDirectoryUserManagerWithMVC", "TestApp\ActiveDirectoryUserManagerWithMVC.csproj", "{7A7FADDE-F064-431D-B3EF-1F40A5C21F87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A7FADDE-F064-431D-B3EF-1F40A5C21F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7FADDE-F064-431D-B3EF-1F40A5C21F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7FADDE-F064-431D-B3EF-1F40A5C21F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7FADDE-F064-431D-B3EF-1F40A5C21F87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {067CB05B-8C72-41ED-8D5C-8FA91881F163}
+	EndGlobalSection
+EndGlobal

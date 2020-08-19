@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TestApp.Models.User>
+@{
+    ViewBag.Title = "Index";
+}
+
+   
+    <div class="container">
+        <h2>What are you looking for ?</h2>
+        <p>You can search for active directory user or group</p>
+        <div class="form-horizontal">
+            <div class="form-group col-sm-5 ">
+                <input id="txtSearch" name="txtSearch" class="form-control" />
+            </div>
+            <div class="form-group col-sm-7 ">
+                <button id="search-btn" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+    <br />
+
+  <div id="search-container">
+           <partial name="_Search" />
+  </div>
+
+
+@section scripts{
+    <script>
+        $('#search-btn').click(function (e) {
+            e.preventDefault();
+            const txt = $("#txtSearch").val();
+            if (txt != null) {
+                $.ajax({
+                    url: '/Search/Search',
+                    type: 'GET',
+                    data: { searchString: txt },
+                    dataType: "text",
+                    success: function (result) {
+                        $('#search-container').html(result);
+                        changeCategory();
+                    }
+                });
+            }
+        });
+    </script>
+    }
